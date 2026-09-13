@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Biryani - Accessible Layout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="layout-header">
+  <h1>Chicken Biryani</h1>
+  <p class="layer">Layers of rice, marinated chicken, vegetables and fried onion, built to feed exactly as many people as are actually coming.</p>
+</header>
+
+<main class="recipe" id="top-box">
+
+  <section class="servings" aria-labelledby="servings-heading">
+    <h2 id="servings-heading">Servings</h2>
+    <div class="servings-control">
+      <button type="button" id="decrease" class="stepper-btn" aria-label="Decrease servings">
+        <span aria-hidden="true">&minus;</span>
+      </button>
+      <label for="servings-input" class="servings-label">
+        <input type="number" id="servings-input" name="servings" min="1" max="12" step="1" value="4" inputmode="numeric">
+      </label>
+      <button type="button" id="increase" class="stepper-btn" aria-label="Increase servings">
+        <span aria-hidden="true">&plus;</span>
+      </button>
+    </div>
+    <p id="servings-status" class="servings-status" role="status" aria-live="polite">Showing quantities for 1 serving.</p>
+  </section>
+
+  <div class="recipe-body">
+
+    <section class="ingredients" aria-labelledby="ingredients-heading">
+      <details id="ingredients-details" open>
+        <summary>
+          <h2 id="ingredients-heading">Ingredients</h2>
+        </summary>
+
+        <ul class="ingredients-list" id="ingredients-list">
+
+          <li>
+            <span class="amount" data-base="2" data-unit="cup" data-plural="cups">2 cups</span>
+            <span class="item-name">basmati rice, washed and soaked 30 minutes</span>
+          </li>
+          <li>
+            <span class="amount" data-base="1" data-unit="kg" data-plural="kg">1 kg</span>
+            <span class="item-name">chicken, bone-in, cut into pieces</span>
+          </li>
+          <li>
+            <span class="amount" data-base="1" data-unit="cup" data-plural="cups">1 cup</span>
+            <span class="item-name">plain yogurt</span>
+          </li>
+          <li>
+            <span class="amount" data-base="3" data-unit="" data-plural="" data-count="true">3</span>
+            <span class="item-name">large onions, thinly sliced and fried until deep gold</span>
+          </li>
+          <li>
+            <span class="amount" data-base="2" data-unit="tbsp" data-plural="tbsp">2 tbsp</span>
+            <span class="item-name">ginger-garlic paste</span>
+          </li>
+          <li>
+            <span class="amount" data-base="4" data-unit="" data-plural="" data-count="true">4</span>
+            <span class="item-name">green chillies, slit</span>
+          </li>
+          <li>
+            <span class="amount" data-base="2" data-unit="" data-plural="" data-count="true">2</span>
+            <span class="item-name">tomatoes, chopped</span>
+          </li>
+          <li>
+            <span class="amount" data-base="3" data-unit="tbsp" data-plural="tbsp">3 tbsp</span>
+            <span class="item-name">biryani masala</span>
+          </li>
+          <li>
+            <span class="amount" data-base="1" data-unit="tsp" data-plural="tsp">1 tsp</span>
+            <span class="item-name">red chilli powder</span>
+          </li>
+          <li>
+            <span class="amount" data-base="0.5" data-unit="tsp" data-plural="tsp">&frac12; tsp</span>
+            <span class="item-name">turmeric</span>
+          </li>
+          <li>
+            <span class="amount" data-base="0.5" data-unit="cup" data-plural="cups">&frac12; cup</span>
+            <span class="item-name">oil or ghee</span>
+          </li>
+          <li>
+            <span class="amount" data-base="0.25" data-unit="tsp" data-plural="tsp">&frac14; tsp</span>
+            <span class="item-name">saffron threads, soaked in 3 tbsp warm milk</span>
+          </li>
+          <li>
+            <span class="amount" data-base="1" data-unit="cup" data-plural="cups">1 cup</span>
+            <span class="item-name">mint leaves, roughly chopped</span>
+          </li>
+          <li>
+            <span class="amount" data-base="0.5" data-unit="cup" data-plural="cups">&frac12; cup</span>
+            <span class="item-name">coriander leaves, roughly chopped</span>
+          </li>
+          <li>
+            <span class="amount" data-base="4" data-unit="cup" data-plural="cups">4 cups</span>
+            <span class="item-name">water, for parboiling the rice</span>
+          </li>
+          <li>
+            <span class="amount no-scale">To taste</span>
+            <span class="item-name">salt</span>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="method" aria-labelledby="method-heading" id="method">
+      <h2 id="method-heading">Method</h2>
+      <ol class="method-list">
+        <li>
+          <h3>Marinate the chicken</h3>
+          <p>Mix the chicken with yogurt, half the ginger-garlic paste, red chilli powder, turmeric and salt. Cover and set aside for at least 30 minutes, or overnight in the fridge.</p>
+        </li>
+        <li>
+          <h3>Parboil the rice</h3>
+          <p>Bring the water to a boil with a little salt and a whole spice or two if you have them (bay leaf, cardamom, cinnamon). Add the soaked rice and cook until it is about 70% done — still firm at the centre. Drain and set aside.</p>
+        </li>
+        <li>
+          <h3>Cook the chicken masala</h3>
+          <p>Heat the oil or ghee. Add the remaining ginger-garlic paste and green chillies, then the tomatoes, and cook until soft. Add the marinated chicken and biryani masala, and cook uncovered until the chicken is tender and the masala has thickened around it.</p>
+        </li>
+        <li>
+          <h3>Layer the pot</h3>
+          <p>Spread the chicken masala across the base of a heavy pot. Layer the parboiled rice over it. Scatter over the fried onions, mint, and coriander. Drizzle the saffron milk over the top.</p>
+        </li>
+        <li>
+          <h3>Seal and steam</h3>
+          <p>Cover tightly — a layer of foil under the lid helps trap the steam. Cook on very low heat for 20 to 25 minutes, until the rice is fully done and the flavours have come together.</p>
+        </li>
+        <li>
+          <h3>Rest, then serve</h3>
+          <p>Turn off the heat and let the pot rest, still covered, for 10 minutes. Fluff gently from the bottom up so the layers mix, and serve hot with raita.</p>
+        </li>
+      </ol>
+    </section>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
